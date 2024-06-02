@@ -9,7 +9,6 @@ terraform {
 
 provider "aws" {
 	region = "us-east-1"
-	profile = "default"
 }
 
 data "aws_ami" "amazon_linux" {
