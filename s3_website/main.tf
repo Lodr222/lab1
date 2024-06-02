@@ -10,7 +10,7 @@ terraform {
 # Configure AWS provider and creds
 provider "aws" {
 	region = "us-east-1"
-	
+	profile = "default"	
 }
 
 # Creating bucket
@@ -19,7 +19,6 @@ resource "aws_s3_bucket" "website" {
 	tags = {
 		Name = "Website"
 		Environment = "Dev"
-		profile = "default"
 	}
 }
 
