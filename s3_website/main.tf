@@ -10,7 +10,8 @@ terraform {
 # Configure AWS provider and creds
 provider "aws" {
 	region = "us-east-1"
-	profile = "default"	
+	access_key = "ASIATN5REGS7UJRFQBYF"
+  	secret_key = "2VPiDnCvolTdxjRygtGxL/KrYfR1wQzv9owxgwP9
 }
 
 # Creating bucket
