@@ -18,6 +18,7 @@ Parameters:
   DBPassword:
     AllowedPattern: '[a-zA-Z0-9]*'
     ConstraintDescription: must contain only alphanumeric characters.
+    Default: Bp644000
     Description: The WordPress database admin account password
     MaxLength: '41'
     MinLength: '8'
@@ -26,6 +27,7 @@ Parameters:
   DBRootPassword:
     AllowedPattern: '[a-zA-Z0-9]*'
     ConstraintDescription: must contain only alphanumeric characters.
+    Default: Tc1004gab
     Description: MySQL root password
     MaxLength: '41'
     MinLength: '8'
@@ -36,6 +38,7 @@ Parameters:
     ConstraintDescription: must begin with a letter and contain only alphanumeric
       characters.
     Description: The WordPress database admin account username
+    Default: admin
     MaxLength: '16'
     MinLength: '1'
     NoEcho: 'true'
@@ -97,7 +100,7 @@ Parameters:
     - cc2.8xlarge
     - cg1.4xlarge
     ConstraintDescription: must be a valid EC2 instance type.
-    Default: t2.small
+    Default: t2.micro
     Description: WebServer EC2 instance type
     Type: String
   KeyName:
