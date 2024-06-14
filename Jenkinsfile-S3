@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Lodr222/lab1.git'
+            }
+        }
+        stage('Init') {
+            steps {
+                dir ('s3_website') {
+                    sh 'terraform init'
+                }
+            }
+        }
+        stage('Plan') {
+            steps {
+                dir ('s3_website') {
+                    sh 'terraform plan'
+                }
+            }
+        }
+        stage('Apply') {
+            steps {
+                dir ('s3_website') {
+                    sh 'terraform apply -auto-approve'
+                }
+            }
+        }
+    }
+}
