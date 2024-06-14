@@ -37,7 +37,7 @@ resource "aws_instance" "web" {
 		sudo yum install httpd -y
 		sudo systemctl start httpd
 		sudo systemctl enable httpd
-		echo "<html><h1>Your webserv works!</h1></html>" > /var/www/html/index.html
+		echo "<html><h1>やった! Jenkins pipeline works! IMIzm-23-1 Lavryk Dmytro</h1></html>" > /var/www/html/index.html
 		EOF
 }
 resource "aws_security_group" "web_sg" {
