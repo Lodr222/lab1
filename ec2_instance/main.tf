@@ -42,7 +42,7 @@ resource "aws_instance" "web" {
 		EOF
 }
 resource "aws_security_group" "web_sg" {
-	name = "Ec2 instance sg"
+	name = "Lab2-EC2-Lavryk-SG"
 	ingress {
 		from_port = 80
 		to_port = 80
