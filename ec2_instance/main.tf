@@ -29,7 +29,7 @@ resource "aws_instance" "web" {
 	key_name = "Lab1"
 	vpc_security_group_ids = [aws_security_group.web_sg.id]
 	tags = {
-		"Name" = "New webserver"
+		"Name" = "Lab2-EC2-Lavryk"
 	}
 
 	user_data = <<-EOF
