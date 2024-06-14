@@ -8,21 +8,21 @@ pipeline {
         }
         stage('Init') {
             steps {
-                dir ('s3_website') {
+                dir ('ec2_instance') {
                     sh 'terraform init'
                 }
             }
         }
         stage('Plan') {
             steps {
-                dir ('s3_website') {
+                dir ('ec2_instance') {
                     sh 'terraform plan'
                 }
             }
         }
         stage('Apply') {
             steps {
-                dir ('s3_website') {
+                dir ('ec2_instance') {
                     sh 'terraform apply -auto-approve'
                 }
             }
